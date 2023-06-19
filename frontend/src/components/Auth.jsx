@@ -20,10 +20,13 @@ const Auth = () => {
     e.preventDefault();
     // Perform login logic here, such as making an API call
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/login", {
-        userName,
-        password,
-      });
+      const response = await axios.post(
+        "https://contact-list-infinitescroll.onrender.com/api/v1/login",
+        {
+          userName,
+          password,
+        }
+      );
       const token = response.data.token;
       localStorage.setItem("Profile", token);
 
